@@ -97,6 +97,8 @@
         <script>scripts\gridRelativeToScreenRelative.gml</script>
         <script>scripts\gridValueGetRelative.gml</script>
         <script>scripts\gridValueSetRelative.gml</script>
+        <script>scripts\analyseNeighbourTunnelsMoore.gml</script>
+        <script>scripts\analyseNeighbourTunnelsVonNeumann.gml</script>
       </scripts>
       <scripts name="painting">
         <script>scripts\composeMooreSurface.gml</script>
@@ -122,8 +124,6 @@
         <script>scripts\antBusyOnce.gml</script>
         <script>scripts\updateInterpolatedValuesButForAnt.gml</script>
         <script>scripts\checkNeighbouringCell.gml</script>
-        <script>scripts\analyseNeighbourTunnelsVonNeumann.gml</script>
-        <script>scripts\analyseNeighbourTunnelsMoore.gml</script>
       </scripts>
     </scripts>
   </scripts>

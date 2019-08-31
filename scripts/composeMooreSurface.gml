@@ -55,7 +55,7 @@ if (cur_neighbour==1)
     //so it's important that this function, overall, gets called AFTER setting the value.
     var everyone_value2=analyseNeighbourTunnelsMoore(argument[2]+neigh_xplus[bit],argument[3]+neigh_yplus[bit]);
     //you
-    var cur_val2=everyone_value2 >> 8;
+    var cur_val2=1;//everyone_value2 >> 8;
 
     //your friends
     var neighbour_value2=everyone_value2-cur_val2*256; //yeah but we know it's always gonna subtract 256
@@ -64,15 +64,16 @@ if (cur_neighbour==1)
     
     
         //erase whatever underneath you
-        draw_sprite_ext(spr1pix,0,argument[2]+neigh_xplus[bit],argument[3]+neigh_yplus[bit],global.cell_size,global.cell_size,0,c_black,1);
+        draw_sprite_ext(spr1pix,0,global.cell_size+neigh_xplus[bit],global.cell_size+neigh_yplus[bit],global.cell_size,global.cell_size,0,c_black,1);
         //and paint yourself
-        draw_sprite_ext(sprTunnelsMooreCore16,neighbour_value2,argument[2]+neigh_xplus[bit],argument[3]+neigh_yplus[bit],1,1,0,c_white,1);    
+        draw_sprite_ext(sprTunnelsMooreCore16,neighbour_value2,global.cell_size+neigh_xplus[bit],global.cell_size+neigh_yplus[bit],1,1,0,c_white,1);    
 
     }
 }
 
 //now, the original tile:
 //are you drawing, or erasing yourself?
+//this bit seems to work
 
 if (argument[0]==0)    //that mean's the value used to be 1 (since we're feeding it !cur_val, remember!) now it should be 0. erase.
     {
