@@ -8,9 +8,9 @@ if !(point_in_rectangle(centrey_x,centrey_y,mouse_x-7*global.chunk_length,mouse_
     {
     //BUT WAIT. Maybe some entities need me?
     var go_ahead_unload=true;
-    if (instance_number(objAnt)>0)
+    if (instance_number(objAntBasic)>0)
         {
-        var nearest=instance_nearest(centrey_x,centrey_y,objAnt);
+        var nearest=instance_nearest(centrey_x,centrey_y,objAntBasic);
         if (point_distance(centrey_x,centrey_y,nearest.x,nearest.y)<=global.chunk_length*2)
             {
             go_ahead_unload=false;

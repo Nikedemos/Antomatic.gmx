@@ -32,6 +32,7 @@
       <script>scripts\is_object_in_view.gml</script>
       <script>scripts\lengthdirButBetter.gml</script>
       <script>scripts\collision_point_list.gml</script>
+      <script>scripts\circularShiftByte.gml</script>
     </scripts>
     <scripts name="simulation environment">
       <scripts name="Camera">
@@ -109,21 +110,32 @@
       <script>scripts\chunkDraw.gml</script>
       <script>scripts\existentialCrisis.gml</script>
       <script>scripts\chunkUnload.gml</script>
-      <script>scripts\chunkLeftPressedWORKS.gml</script>
-      <script>scripts\chunkLeftPressed.gml</script>
       <script>scripts\chunkLeftPressedNew.gml</script>
       <script>scripts\chunkRightPressed.gml</script>
       <script>scripts\isChunkEmpty.gml</script>
+      <script>scripts\toggleCellAtScreen.gml</script>
     </scripts>
     <scripts name="entities">
-      <scripts name="ant">
-        <script>scripts\antInit.gml</script>
+      <scripts name="ant basic">
+        <script>scripts\antBasicInit.gml</script>
+        <script>scripts\antBasicSubtick.gml</script>
+        <script>scripts\antBasicUpdateDrawValues.gml</script>
+        <script>scripts\antBasicDraw.gml</script>
         <script>scripts\antKill.gml</script>
+        <script>scripts\checkNeighbouringCell.gml</script>
+        <scripts name="ant crawler">
+          <script>scripts\antCrawlerInit.gml</script>
+          <script>scripts\antCrawlerSubtick.gml</script>
+          <script>scripts\antCrawlerPlanNextMove.gml</script>
+          <script>scripts\antCrawlerDestroy.gml</script>
+          <script>scripts\script81.gml</script>
+        </scripts>
+      </scripts>
+      <scripts name="rubbish">
+        <script>scripts\antBusyOnce.gml</script>
         <script>scripts\antSubtick.gml</script>
         <script>scripts\planNextMove.gml</script>
-        <script>scripts\antBusyOnce.gml</script>
         <script>scripts\updateInterpolatedValuesButForAnt.gml</script>
-        <script>scripts\checkNeighbouringCell.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -149,7 +161,9 @@
       <object>objects\objChunk</object>
       <object>objects\objCrashDummy</object>
       <object>objects\objAntCollider</object>
-      <object>objects\objAnt</object>
+      <object>objects\objAntBasic</object>
+      <object>objects\objAntCrawler</object>
+      <object>objects\objDigSite</object>
     </objects>
   </objects>
   <rooms name="rooms">

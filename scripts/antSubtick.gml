@@ -2,7 +2,7 @@
 //we're not doing default ticker stuff,
 //ants have no vanilla physics to emulate
 //with the t_* variable system.
-
+/*
 if (bound_clock.do_update_now==true)
 {
 //this is where you make your "draw_x, draw_y" things

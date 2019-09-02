@@ -20,7 +20,7 @@ var cur_val=gridValueGetRelative(grid_x,grid_y,id);
 //show_message(cur_val);
 if (cur_val==1)
     {
-    instance_create(paint_x,paint_y,objAnt);
+    instance_create(paint_x,paint_y,objAntCrawler);
     }
 //because we changed it now
 

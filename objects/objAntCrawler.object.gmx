@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-10</depth>
   <persistent>0</persistent>
-  <parentName>objTicker</parentName>
+  <parentName>objAntBasic</parentName>
   <maskName>sprMask24</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -39,7 +39,30 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>antInit();
+            <string>antCrawlerInit();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>antCrawlerDestroy();
 </string>
           </argument>
         </arguments>
@@ -62,30 +85,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>antSubtick();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,draw_x,draw_y,image_xscale,image_yscale,draw_ang,image_blend,image_alpha);
+            <string>antCrawlerSubtick();
 </string>
           </argument>
         </arguments>
