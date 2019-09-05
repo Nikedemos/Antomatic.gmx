@@ -18,6 +18,7 @@
     <sprite>sprites\sprTunnelBrushAdditive</sprite>
     <sprite>sprites\sprTunnelBrushAdditiveSharp</sprite>
     <sprite>sprites\sprTunnelsMooreCore16</sprite>
+    <sprite>sprites\sprX</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgGround</background>
@@ -33,6 +34,7 @@
       <script>scripts\lengthdirButBetter.gml</script>
       <script>scripts\collision_point_list.gml</script>
       <script>scripts\circularShiftByte.gml</script>
+      <script>scripts\explode_string.gml</script>
     </scripts>
     <scripts name="simulation environment">
       <scripts name="Camera">
@@ -76,6 +78,25 @@
         <script>scripts\recalculateHandV.gml</script>
         <script>scripts\updateInterpolatedValues.gml</script>
         <script>scripts\draw_self_timeshifted.gml</script>
+      </scripts>
+      <scripts name="GUI">
+        <script>scripts\guiInit.gml</script>
+        <script>scripts\windowOpen.gml</script>
+        <script>scripts\windowClose.gml</script>
+        <script>scripts\windowAlign.gml</script>
+        <script>scripts\windowFocusOn.gml</script>
+        <scripts name="window">
+          <script>scripts\windowDraw.gml</script>
+          <script>scripts\regenerateWindowCanvases.gml</script>
+        </scripts>
+        <script>scripts\guiMouseHandler.gml</script>
+        <script>scripts\guiMouseCommon.gml</script>
+        <script>scripts\guiLeftPressed.gml</script>
+        <script>scripts\guiLeftReleased.gml</script>
+        <script>scripts\guiRightPressed.gml</script>
+        <scripts name="blueprints">
+          <script>scripts\test.gml</script>
+        </scripts>
       </scripts>
     </scripts>
     <scripts name="chunks">
@@ -143,6 +164,7 @@
     <font>fonts\fntCursedTimerFromFontspaceDotCom</font>
     <font>fonts\fntSameAsAboveButSmaller</font>
     <font>fonts\fntMedium</font>
+    <font>fonts\fntMediumBold</font>
     <font>fonts\fntTiny</font>
     <font>fonts\fntMicro</font>
   </fonts>
@@ -155,6 +177,10 @@
       <object>objects\objClockSlider</object>
       <object>objects\objStopwatch</object>
       <object>objects\objClockControls</object>
+      <objects name="GUI">
+        <object>objects\objGUI</object>
+        <object>objects\objWindow</object>
+      </objects>
     </objects>
     <objects name="Ants">
       <object>objects\objChunkSupervisor</object>
@@ -169,7 +195,13 @@
   <rooms name="rooms">
     <room>rooms\testo</room>
   </rooms>
-  <constants number="23">
+  <constants number="29">
+    <constant name="GUI_BOTTOM">2560</constant>
+    <constant name="GUI_RIGHT">1440</constant>
+    <constant name="GUI_MIDDLE">720</constant>
+    <constant name="GUI_CENTER">1280</constant>
+    <constant name="GUI_LEFT">0</constant>
+    <constant name="GUI_TOP">0</constant>
     <constant name="DEATH_REASON_STUCK">0</constant>
     <constant name="NEXT_MOVE_GO">1</constant>
     <constant name="NEXT_MOVE_ROTATE_CLOCKWISE">-90</constant>

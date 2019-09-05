@@ -117,7 +117,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>chunkLeftPressedNew();
+            <string>//show_message("THIS HAPPENS, CHUNK");
+chunkLeftPressedNew();
 </string>
           </argument>
         </arguments>

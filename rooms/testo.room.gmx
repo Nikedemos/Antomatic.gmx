@@ -73,6 +73,7 @@ draw_enable_drawevent(1); //very important. otherwise the screen can get "stuck"
     <instance objName="objClockSlider" x="448" y="32" name="inst_F0E9B636" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objStopwatch" x="960" y="32" name="inst_BE3B6CAC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objClockControls" x="464" y="16" name="inst_D9FE9441" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objGUI" x="0" y="112" name="inst_3583E3AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objCamera" x="80" y="32" name="inst_44255CCD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objChunkSupervisor" x="16" y="64" name="inst_FFEDE7FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>

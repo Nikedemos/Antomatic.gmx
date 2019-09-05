@@ -129,7 +129,6 @@ recalculateUpdateRate(bound_clock);
             <string>//first, check if this is the right GUI area
 if (device_mouse_y_to_gui(0)&gt;=view_hport[0]-knob_size)
 {
-mouse_clear(mb_left);
 if (dragging==0)
     {
     delta_x=device_mouse_x_to_gui(0)-draw_x+knob_size/2;
