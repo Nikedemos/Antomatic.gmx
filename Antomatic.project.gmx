@@ -214,8 +214,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
     <room>rooms\testo</room>
+    <room>rooms\room0</room>
   </rooms>
   <constants number="34">
     <constant name="ELEMENT_BITMAP">3</constant>
