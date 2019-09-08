@@ -1,3 +1,5 @@
+windowAlign(id,GUI_CENTER,GUI_MIDDLE,0,0);
+
 caption="TEST!";
 
 //explode the params

@@ -1,4 +1,6 @@
-global.gui_depth_starts_at=-10000; //to make sure everything is on the very, very top
+global.gui_depth_starts_at=-10000;
+global.gui_megafocus_starts_at=-20000;
+//to make sure everything is on the very, very top
 global.window_focus=noone;
 
 global.window_bar_height=24;
@@ -29,12 +31,12 @@ global.lock_gui=false;
 //before we can switch to any other windows or interact with the game
 
 //test windows
-var w1=windowOpen("test","test");
+var w1=windowOpen("menubar","");
 var w2=windowOpen("test","test");
 var w3=windowOpen("test","test");
 
-w1.window_x-=100;
-w1.window_y-=100;
+//this will be done by the menubar script, or w/e
 
 w2.window_x-=200;
 w2.window_y-=200;
+

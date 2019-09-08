@@ -26,6 +26,7 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\adaptScreen.gml</script>
     <scripts name="various scripts">
       <script>scripts\modulo_euclidian.gml</script>
       <script>scripts\zerofill_before.gml</script>
@@ -83,20 +84,33 @@
         <script>scripts\guiInit.gml</script>
         <script>scripts\windowOpen.gml</script>
         <script>scripts\windowClose.gml</script>
+        <script>scripts\windowStep.gml</script>
         <script>scripts\windowAlign.gml</script>
         <script>scripts\windowFocusOn.gml</script>
         <scripts name="window">
           <script>scripts\windowDraw.gml</script>
           <script>scripts\regenerateWindowCanvases.gml</script>
+          <script>scripts\elementAdd.gml</script>
         </scripts>
         <script>scripts\guiMouseHandler.gml</script>
+        <script>scripts\isWindowHoverable.gml</script>
+        <script>scripts\mouseOverWindow.gml</script>
+        <script>scripts\windowMouseGetRelative.gml</script>
         <script>scripts\guiMouseCommon.gml</script>
         <script>scripts\guiLeftPressed.gml</script>
         <script>scripts\guiLeftReleased.gml</script>
         <script>scripts\guiRightPressed.gml</script>
         <scripts name="blueprints">
+          <scripts name="menubar">
+            <script>scripts\menubar.gml</script>
+            <script>scripts\menubar_draw.gml</script>
+            <script>scripts\menubar_step.gml</script>
+            <script>scripts\menuGridAddInto.gml</script>
+          </scripts>
           <script>scripts\test.gml</script>
         </scripts>
+        <script>scripts\script97.gml</script>
+        <script>scripts\script107.gml</script>
       </scripts>
     </scripts>
     <scripts name="chunks">
@@ -180,6 +194,13 @@
       <objects name="GUI">
         <object>objects\objGUI</object>
         <object>objects\objWindow</object>
+        <objects name="window elements">
+          <object>objects\objWindowElement</object>
+          <object>objects\objCaption</object>
+          <object>objects\objButton</object>
+          <object>objects\objMainMenu</object>
+          <object>objects\objBitmap</object>
+        </objects>
       </objects>
     </objects>
     <objects name="Ants">
@@ -193,11 +214,17 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room0</room>
     <room>rooms\testo</room>
   </rooms>
-  <constants number="29">
-    <constant name="GUI_BOTTOM">2560</constant>
-    <constant name="GUI_RIGHT">1440</constant>
+  <constants number="34">
+    <constant name="ELEMENT_BITMAP">3</constant>
+    <constant name="ELEMENT_MENU">2</constant>
+    <constant name="ELEMENT_BUTTON">1</constant>
+    <constant name="ELEMENT_CAPTION">0</constant>
+    <constant name="GUI_NONE">-1</constant>
+    <constant name="GUI_RIGHT">2560</constant>
+    <constant name="GUI_BOTTOM">1440</constant>
     <constant name="GUI_MIDDLE">720</constant>
     <constant name="GUI_CENTER">1280</constant>
     <constant name="GUI_LEFT">0</constant>

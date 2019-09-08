@@ -15,7 +15,8 @@ if (maybe_window!=noone)
     //clicking inside of the window invokes the window mouse action
     //for the left button (here in this example)
     
-    if (global.wmy_curr<maybe_window.window_y+global.window_bar_height)
+    
+    if (maybe_window.controls==true && (global.wmy_curr<maybe_window.window_y+global.window_bar_height))
         {
         //we left-clicked on the bar - check if it's the X button
         if (global.wmx_curr>maybe_window.window_x+maybe_window.window_width-global.window_close_button_width)
@@ -32,6 +33,10 @@ if (maybe_window!=noone)
                 global.dragging_delta_y=maybe_window.window_y-global.wmy_curr;
                 }   
             }
+        }
+    else
+        {
+        //show_message("CLICK_INSIDE_WINDOW!");
         }
     
     mouse_clear(mb_left);

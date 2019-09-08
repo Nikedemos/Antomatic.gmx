@@ -1,0 +1,1 @@
+///elementAdd(window,element_type_const,element_init_script,element_init_script_parameters_separated_by_comma)

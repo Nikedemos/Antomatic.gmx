@@ -30,7 +30,7 @@ var perform_close_check=true;
 if (maybe_window!=noone)
     {
 
-    if (global.wmy_curr<maybe_window.window_y+global.window_bar_height)
+    if (maybe_window.controls==true && (global.wmy_curr<maybe_window.window_y+global.window_bar_height))
         {
         //we left-released on the bar - check if it's the X button
         if (global.wmx_curr>maybe_window.window_x+maybe_window.window_width-global.window_close_button_width)

@@ -17,7 +17,24 @@ window.bgcolour=global.window_bgcolour_default;
 window.bgalpha=1;
 window.window_alpha=1;
 window.close_pressed=false;
+window.border=true;
+window.mouse_over=false;
+window.mouse_over_x=-1;
+window.mouse_over_y=-1;
 
+window.action_step=noone; //what does the window do in the step event?
+window.action_draw=noone; //what does the window draw on its "window canvas" surface?
+
+window.megafocus=false;
+
+//megafocus means that the window always considers itself "in" focus
+//(unless we're closing, dragging another window, resizing, etc)
+//it also means it's not gonna get considered when shifting depths,
+//setting focus etc
+//we just give it depth that starts at megafocus_depth_offset.
+//ideally, you have 2-3 megafocus windows - one, borderless, is the taskbar,
+//and some bordered ones, like tool palletes, status bars etc.
+//their depths don't change. just make it high enough.
 
 //when something places itself in the window, based on its x,y placement and width and height,
 //we will decide whether to perform overflow actions (scrollbars or stretching window).
@@ -52,7 +69,7 @@ var prev_window_focus=global.window_focus;
 global.window_focus=window.id;
 
 
-//egenerate the caption bar of the previously focused on window
+//regenerate the caption bar of the previously focused on window
 // - if it exists, that is!
 
 if (prev_window_focus!=noone)
@@ -67,6 +84,5 @@ regenerateWindowCanvases(window,true,true,true); //we ain't got no nintendo, no 
 
 //centre window based on width, height and gui size
 //this function takes the width and height into account
-windowAlign(window,GUI_CENTER,GUI_MIDDLE,0,0);
     
 return window;
